@@ -5559,6 +5559,239 @@ figcaption {
   background-repeat: repeat;
   background-attachment: scroll;
 }
+.nav_bar * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Font size adjustment */
+.nav_bar html {
+  font-size: 62.5%;
+}
+
+/* Applying font-family */
+.nav_bar body {
+  font-family: 'PP Mori', sans-serif;
+  font-weight: 400;
+}.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+    display: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar {
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #02081E;
+    opacity: 0.85;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+    width: 100%;
+}
+
+/* Menu items styles */
+.menu-items {
+    order: 2;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.logo {
+    order: 1;
+    max-width: 15rem; /* Slightly increased size */
+    width: 100%;
+    height: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-items li {
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #117964;
+}
+
+.get-started-btn {
+    display: inline-block;
+    padding: 9px 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    border-radius: 0.5rem;
+    background-color: #E26231;
+    color:#000;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+.get-started-btn:hover {
+    background-color: #f09d5a;
+    opacity: 0.9;
+    text-decoration: none;
+    color: #000;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        opacity: 0.95;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines {
+        display: block;
+    }
+
+    .navbar-container {
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"] {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar-container .hamburger-lines {
+        display: block;
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #fff;
+    }
+
+    .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items {
+        padding-top: 100px;
+        background: #02081E;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+        overflow-y: auto; 
+    }
+
+    .navbar .menu-items li {
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .navbar .menu-items .get-started-btn {
+        margin-top: 2rem; /* Adding some margin for better spacing */
+    }
+    
+    .logo {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 2.5rem;
+        height: auto;
+        width: 15rem; /* Slightly increased size */
+        text-decoration: none;
+        color: #333333;
+        float: left;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar-container input[type="checkbox"]:checked ~ .logo {
+        display: none;
+    }
+}
+
 
 .navbar_menu-buttons {
   display: -webkit-box;
@@ -5690,6 +5923,114 @@ figcaption {
   height: 100%;
 }
 
+/* General Reset */
+
+
+/* Container Styles */
+.page-padding {
+    padding: 0 2rem;
+}
+
+.container-large {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.padding-vertical {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.padding-custom1 {
+    padding-top: 40px;
+}
+
+/* Title Styling */
+.h2 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+}
+.h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e26231;
+    margin: 20px auto 0;
+}
+.features * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Font size adjustment */
+.features html {
+  font-size: 62.5%;
+}
+
+/* Applying font-family */
+.features body {
+  font-family: 'PP Mori', sans-serif;
+  font-weight: 400;
+  background: #02081E; /* dark blue background */
+}
+
+/* Particles Container */
+.particles-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #02081e;
+  z-index: -1;
+}
+
+/* Features Section */
+.features {
+  padding: 50px 0;
+  position: relative;
+  color: #fff;
+}
+
+/* Container Styles */
+.page-padding {
+  padding: 0 2rem;
+}
+
+.container-large {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.padding-vertical {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.padding-custom1 {
+  padding-top: 40px;
+}
+
+.h2 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #e26231;
+  margin: 20px auto 0;
+}
+
+/* Features Container */
 .features-container {
   display: flex;
   justify-content: space-around;
@@ -5700,21 +6041,24 @@ figcaption {
 
 /* Individual Feature Boxes */
 .feature-box {
-  background: linear-gradient(145deg, white, #e6e6e6); /* Subtle gradient for depth */
-  border-radius: 8px; /* Rounded corners */
+  background: linear-gradient(145deg, #2e3a5f, #3c4b7a); /* Dark gradient */
+  border-radius: 8px; 
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin: 10px;
   padding: 20px;
   text-align: center;
   width: calc(33.333% - 20px); /* Calculation to maintain spacing */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
   position: relative; /* For positioning child elements */
+  color: #fff; /* White text color */
 }
 
 /* Enhance feature effects */
 .feature-box:hover {
   transform: translateY(-10px); /* Increased lift effect on hover */
   box-shadow: 0 15px 30px rgba(0,0,0,0.25); /* More pronounced shadow on hover */
+  background: linear-gradient(145deg, #17224f, #263570); /* Darker gradient on hover */
+  color: #E26231; /* Change text color */
 }
 
 /* Feature icon styling */
@@ -5722,11 +6066,13 @@ figcaption {
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 2.5rem; /* FontAwesome Icons */
 }
 
 .feature-box:hover .feature-icon {
   transform: rotate(360deg); /* Rotate icon on hover */
+  color: #E26231; /* Change icon color */
 }
 
 /* Add a pulse animation */
@@ -5740,21 +6086,29 @@ figcaption {
   animation: pulse 1s infinite; /* Apply the pulse animation */
 }
 
-@media (max-width: 768px) {
+/* Responsive adjustments */
+@media (max-width: 1024px) {
   .features-container {
-      flex-direction: column;
+    flex-direction: column; /* Stack features vertically */
   }
   .feature-box {
     width: auto; /* Full width for smaller screens */
     padding: 30px; /* Increased padding for better readability on mobile */
-}
+  }
 }
 
-@media (max-width: 1024px) {
-.feature-box {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .features-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .feature-box {
     width: calc(50% - 20px); /* Two per row for medium screens */
+  }
 }
-}
+
+  
 /* Pricing and About Section General Styles */
 .pricing, .about {
   background: #000;
