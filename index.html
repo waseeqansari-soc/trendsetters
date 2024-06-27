@@ -24,100 +24,18 @@
 
 <body class="body">
   <div class="page-wrapper">
-    <div class="global-styles w-embed">
-      <style>
-        .w-richtext>:first-child {
-          margin-top: 0;
-        }
-
-        .w-richtext>:last-child,
-        .w-richtext ol li:last-child,
-        .w-richtext ul li:last-child {
-          margin-bottom: 0;
-        }
-
-        .clickable-off {
-          pointer-events: none;
-        }
-
-        .clickable-on {
-          pointer-events: auto;
-        }
-
-        .div-square::after {
-          content: "";
-          display: block;
-          padding-bottom: 100%;
-        }
-
-        main:focus-visible {
-          outline: -webkit-focus-ring-color auto 0px;
-        }
-
-        .container-medium,
-        .container-small,
-        .container-large {
-          margin-right: auto !important;
-          margin-left: auto !important;
-        }
-
-        .w-input,
-        .w-select,
-        a {
-          color: inherit;
-          text-decoration: inherit;
-          font-size: inherit;
-        }
-
-        .text-style-3lines {
-          display: -webkit-box;
-          overflow: hidden;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-        }
-
-        .text-style-2lines {
-          display: -webkit-box;
-          overflow: hidden;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-        }
-
-        .truncate-width {
-          width: 100%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-
-        .no-scrollbar {
-          -ms-overflow-style: none;
-          overflow: -moz-scrollbars-none;
-        }
-
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-      </style>
-    </div>
+    <!-- <div class="global-styles w-embed">
+    </div> -->
     <main class="main-wrapper">
       <div class="navbar_component w-nav">
         <div class="navbar_container">
           <a href="#" class="navbar_logo-link w-nav-brand">
             <img
               src="https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c496893c4abfdbe004431b_trendsetters-logo.png"
-              loading="lazy" sizes="(max-width: 479px) 160px, 192px"
-              srcset="https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c496893c4abfdbe004431b_trendsetters-logo-p-500.png 500w, https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c496893c4abfdbe004431b_trendsetters-logo.png 1347w"
-              alt="" class="navbar_logo-2">
+              loading="lazy" alt="" class="navbar_logo-2">
           </a>
-          <nav role="navigation" class="navbar_menu w-nav-menu">
-            <a href="#" class="navbar_link w-nav-link">Features</a>
-            <a href="#" class="navbar_link w-nav-link">Pricing</a>
-            <a href="#" class="navbar_link w-nav-link">About</a>
-            <div class="navbar_menu-buttons"><a href="#" class="button is-button-small w-button">Get started</a></div>
-          </nav>
           <div class="navbar_menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu"
-            role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+            role="button" tabindex="0">
             <div class="menu-icon1">
               <div class="menu-icon1_line-top"></div>
               <div class="menu-icon1_line-middle">
@@ -126,9 +44,16 @@
               <div class="menu-icon1_line-bottom"></div>
             </div>
           </div>
+          <nav role="navigation" class="navbar_menu w-nav-menu">
+            <a href="#" class="navbar_link w-nav-link">Features</a>
+            <a href="#" class="navbar_link w-nav-link">Pricing</a>
+            <a href="#" class="navbar_link w-nav-link">About</a>
+            <div class="navbar_menu-buttons"><a href="#" class="button is-button-small w-button">Get started</a></div>
+          </nav>
         </div>
-        <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+        <div class="w-nav-overlay" id="w-nav-overlay-0" style="display: none;"></div>
       </div>
+
       <header class="section-header1">
         <div class="orange-blur-circle is-1 hide-tablet hide-mobile-portrait hide-mobile-landscape"></div>
         <div class="overlay-black"></div>
@@ -502,21 +427,25 @@
                     and releases.</div>
                 </div>
                 <div class="footer1_form-block w-form">
-                  <form id="email-form" name="email-form" action="/path-to-your-endpoint" method="POST" class="footer1_form" aria-label="Email Form">
-                      <input type="email" class="form-input w-input" maxlength="256" name="email-2" placeholder="Enter your email" id="email-2" required>
-                      <input type="submit" value="Subscribe" data-wait="Please wait..." class="button-secondary is-button-small w-button">
+                  <form id="email-form" name="email-form" action="/path-to-your-endpoint" method="POST"
+                    class="footer1_form" aria-label="Email Form">
+                    <input type="email" class="form-input w-input" maxlength="256" name="email-2"
+                      placeholder="Enter your email" id="email-2" required>
+                    <input type="submit" value="Subscribe" data-wait="Please wait..."
+                      class="button-secondary is-button-small w-button">
                   </form>
                   <div class="text-size-ttiny text-color-white">
-                      By subscribing you agree to our <a href="#"><span>Privacy Policy</span></a> and provide consent to receive updates from our company.
+                    By subscribing you agree to our <a href="#"><span>Privacy Policy</span></a> and provide consent to
+                    receive updates from our company.
                   </div>
                   <div class="success-message w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
-                      <div>Thank you! Your submission has been received!</div>
+                    <div>Thank you! Your submission has been received!</div>
                   </div>
                   <div class="error-message w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure">
-                      <div>Oops! Something went wrong while submitting the form.</div>
+                    <div>Oops! Something went wrong while submitting the form.</div>
                   </div>
-              </div>
-              
+                </div>
+
               </div>
               <div class="w-layout-grid footer1_menu-wrapper">
                 <div class="footer1_link-list">
@@ -664,6 +593,20 @@
       duration: loaderDuration,
       ease: CustomEase.create("custom", customEase)
     }, 0);
+
+    document.querySelector('.navbar_menu-button').addEventListener('click', function () {
+      var navMenu = document.querySelector('.w-nav-menu');
+      var navOverlay = document.querySelector('.w-nav-overlay');
+      var isVisible = navMenu.style.display === 'flex';
+
+      navMenu.style.display = isVisible ? 'none' : 'flex';
+      navOverlay.style.display = isVisible ? 'none' : 'block';
+    });
+
+    document.querySelector('.w-nav-overlay').addEventListener('click', function () {
+      this.style.display = 'none';
+      document.querySelector('.w-nav-menu').style.display = 'none';
+    });
   </script>
 </body>
 
