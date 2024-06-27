@@ -34,7 +34,7 @@
               src="https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c496893c4abfdbe004431b_trendsetters-logo.png"
               loading="lazy" alt="" class="navbar_logo-2">
           </a>
-          
+
           <nav role="navigation" class="navbar_menu w-nav-menu">
             <a href="#" class="navbar_link w-nav-link">Features</a>
             <a href="#" class="navbar_link w-nav-link">Pricing</a>
@@ -411,6 +411,101 @@
       </div>
     </div>
   </section>
+  <section class="features">
+    <div id="particles-js" class="particles-container"></div>
+    <div class="page-padding">
+        <div class="container-large">
+            <div class="padding-vertical padding-custom1">
+                <div class="padding-vertical padding-large">
+                    <h2 class="h2 text-align-center text-color-white">Our Product Features</h2>
+                    <section class="features-container">
+                     
+
+                        <div class="feature-box">
+                            <img class="feature-icon" src="https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c4990368cfbe116ea971db_trendsetters-icon.png" alt="Icon">
+                            <h2>Instant Analytics</h2>
+                            <p>Gain insights instantly with our powerful analytics tools. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                        </div>
+
+                        <div class="feature-box">
+                            <img class="feature-icon" src="https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c4990368cfbe116ea971db_trendsetters-icon.png" alt="Icon">
+                            <h2>Real-Time Collaboration</h2>
+                            <p>Collaborate in real-time with your team. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                        </div>
+
+                        <div class="feature-box">
+                            <img class="feature-icon" src="https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c4990368cfbe116ea971db_trendsetters-icon.png" alt="Icon">
+                            <h2>24/7 Support</h2>
+                            <p>Our support team is available around the clock to help you. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                        </div>
+
+                        <div class="feature-box">
+                            <img class="feature-icon" src="https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c4990368cfbe116ea971db_trendsetters-icon.png" alt="Icon">
+                            <h2>Mobile Integration</h2>
+                            <p>Access our services anytime, anywhere from your mobile device. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <section class="pricing">
+    <div class="page-padding">
+        <div class="container-large">
+            <div class="padding-vertical padding-custom1">
+                <h2 class="h2 text-align-center text-color-white">Pricing Plans</h2>
+                <div class="pricing-container">
+                    <div class="pricing-box">
+                        <h3>Basic</h3>
+                        <p>$199 per month</p>
+                        <ul>
+                            <li>Access to basic features</li>
+                            <li>Email support</li>
+                            <li>Analytics dashboard</li>
+                        </ul>
+                        <button class="btn">Choose Plan</button>
+                    </div>
+                    <div class="pricing-box">
+                        <h3>Pro</h3>
+                        <p>$399 per month</p>
+                        <ul>
+                            <li>Everything in Basic, plus:</li>
+                            <li>24/7 support</li>
+                            <li>Premium analytics tools</li>
+                        </ul>
+                        <button class="btn">Choose Plan</button>
+                    </div>
+                    <div class="pricing-box">
+                        <h3>Enterprise</h3>
+                        <p>Custom pricing</p>
+                        <ul>
+                            <li>All Pro features</li>
+                            <li>Dedicated support team</li>
+                            <li>Custom integrations</li>
+                        </ul>
+                        <button class="btn">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+  <div class="page-padding">
+      <div class="container-large">
+          <div class="padding-vertical padding-custom1">
+              <h2 class="h2 text-align-center text-color-white">About Us</h2>
+              <div class="about-content">
+                  <p>Founded in 2021, we are committed to delivering top-notch solutions to our clients, ensuring high performance and reliability. Our team consists of experts who are passionate about technology and innovation.</p>
+                  <p>Our mission is to empower businesses with advanced analytics and robust support to help them thrive in a digital-first world.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
   <footer class="footer1_component">
     <div class="page-padding">
       <div class="container-large">
@@ -595,19 +690,20 @@
       ease: CustomEase.create("custom", customEase)
     }, 0);
 
-    document.querySelector('.navbar_menu-button').addEventListener('click', function() {
-    var navMenu = document.querySelector('.w-nav-menu');
-    var navOverlay = document.querySelector('.w-nav-overlay');
-    var isVisible = navMenu.style.display === 'flex';
-    
-    navMenu.style.display = isVisible ? 'none' : 'flex'; // Toggle display
-    navOverlay.style.display = isVisible ? 'none' : 'block'; // Toggle overlay
-});
+    document.querySelector('.navbar_menu-button').addEventListener('click', function () {
+      var navMenu = document.querySelector('.w-nav-menu');
+      var navOverlay = document.querySelector('.w-nav-overlay');
+      var isVisible = navMenu.style.display === 'flex';
 
-document.querySelector('.w-nav-overlay').addEventListener('click', function() {
-    this.style.display = 'none';
-    document.querySelector('.w-nav-menu').style.display = 'none';
-});
+      navMenu.style.display = isVisible ? 'none' : 'flex'; // Toggle display
+      navOverlay.style.display = isVisible ? 'none' : 'block'; // Toggle overlay
+    });
+
+    document.querySelector('.w-nav-overlay').addEventListener('click', function () {
+      this.style.display = 'none';
+      document.querySelector('.w-nav-menu').style.display = 'none';
+    });
+    
   </script>
 </body>
 
