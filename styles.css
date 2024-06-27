@@ -2072,7 +2072,9 @@ textarea.w-select {
 
 .w-nav-menu {
   display: flex;
-    align-items: center;
+  align-items: center;
+  justify-content: flex-end; /* Aligns items to the right */
+  width: 100%;
 }
 
 [data-nav-menu-open] {
@@ -5579,16 +5581,15 @@ figcaption {
 }
 
 .navbar_component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  background-color: #02081e;
   position: sticky;
   top: 0;
-  display: flex;
-  align-items: center;
-  height: auto;
-  min-height: 4.5rem;
-  padding: 0 5%;
-  background-color: #02081e;
   z-index: 1000;
-  ;
 }
 
 .navbar_logo-2 {
@@ -5616,11 +5617,9 @@ figcaption {
 
 .navbar_container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 80rem;
-  margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .navbar_link {
@@ -5630,8 +5629,8 @@ figcaption {
   font-weight: 400;
 }
 .navbar_logo-link img {
-  width: auto; /* Adjusts size based on the container */
-  height: 100%;
+  height: auto;
+    width: 192px; ;
 }
 
 .navbar_link.w--current {

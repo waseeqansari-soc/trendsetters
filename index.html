@@ -34,6 +34,13 @@
               src="https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c496893c4abfdbe004431b_trendsetters-logo.png"
               loading="lazy" alt="" class="navbar_logo-2">
           </a>
+          
+          <nav role="navigation" class="navbar_menu w-nav-menu">
+            <a href="#" class="navbar_link w-nav-link">Features</a>
+            <a href="#" class="navbar_link w-nav-link">Pricing</a>
+            <a href="#" class="navbar_link w-nav-link">About</a>
+            <div class="navbar_menu-buttons"><a href="#" class="button is-button-small w-button">Get started</a></div>
+          </nav>
           <div class="navbar_menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu"
             role="button" tabindex="0">
             <div class="menu-icon1">
@@ -44,12 +51,6 @@
               <div class="menu-icon1_line-bottom"></div>
             </div>
           </div>
-          <nav role="navigation" class="navbar_menu w-nav-menu">
-            <a href="#" class="navbar_link w-nav-link">Features</a>
-            <a href="#" class="navbar_link w-nav-link">Pricing</a>
-            <a href="#" class="navbar_link w-nav-link">About</a>
-            <div class="navbar_menu-buttons"><a href="#" class="button is-button-small w-button">Get started</a></div>
-          </nav>
         </div>
         <div class="w-nav-overlay" id="w-nav-overlay-0" style="display: none;"></div>
       </div>
@@ -594,19 +595,19 @@
       ease: CustomEase.create("custom", customEase)
     }, 0);
 
-    document.querySelector('.navbar_menu-button').addEventListener('click', function () {
-      var navMenu = document.querySelector('.w-nav-menu');
-      var navOverlay = document.querySelector('.w-nav-overlay');
-      var isVisible = navMenu.style.display === 'flex';
+    document.querySelector('.navbar_menu-button').addEventListener('click', function() {
+    var navMenu = document.querySelector('.w-nav-menu');
+    var navOverlay = document.querySelector('.w-nav-overlay');
+    var isVisible = navMenu.style.display === 'flex';
+    
+    navMenu.style.display = isVisible ? 'none' : 'flex'; // Toggle display
+    navOverlay.style.display = isVisible ? 'none' : 'block'; // Toggle overlay
+});
 
-      navMenu.style.display = isVisible ? 'none' : 'flex';
-      navOverlay.style.display = isVisible ? 'none' : 'block';
-    });
-
-    document.querySelector('.w-nav-overlay').addEventListener('click', function () {
-      this.style.display = 'none';
-      document.querySelector('.w-nav-menu').style.display = 'none';
-    });
+document.querySelector('.w-nav-overlay').addEventListener('click', function() {
+    this.style.display = 'none';
+    document.querySelector('.w-nav-menu').style.display = 'none';
+});
   </script>
 </body>
 
