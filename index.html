@@ -245,10 +245,10 @@
       <!-- </div>
       </section> -->
       <!-- </div> -->
-      <section class="section-testimonial7">
+      <section class="section-testimonial7 ">
         <div class="page-padding">
           <div class="container-large">
-            <div class="padding-vertical padding-custom1">
+            <div class="padding-vertical padding-custom1 testimonial-custom-padding" style="padding: 0 0 !important;">
               <div class="padding-vertical padding-large">
                 <section class="testimonials">
                   <h2 class="h2 text-align-center text-color-white">They talk about us</h2>
@@ -420,9 +420,9 @@
         <div class="price">$99 <sub>/ month</sub></div>
         <div class="maus-options">
           <select name="" id="">
-            <option value="">2500 MAUs</option>
-            <option value="">5000 MAUs</option>
-            <option value="">10000 MAUs</option>
+            <option class="maus-option" value="">2500 MAUs</option>
+            <option class="maus-option" value="">5000 MAUs</option>
+            <option class="maus-option" value="">10000 MAUs</option>
           </select>
           <span>Monthly active users</span>
         </div>
@@ -446,9 +446,8 @@
           <li>Dedicated environment</li>
           <li>Premium support and services</li>
         </ul>
-        <button class="choose-btn" type="button">
-          Contact Us
-        </button>
+        <a href="contact-us" class="choose-btn" role="button">Contact Us</a>
+
       </div>
     </div>
   </section>
@@ -477,7 +476,7 @@
           <li>Figma</li>
         </ul>
         <div class="about__buttons">
-          <a href="#contact" class="button">Contact Me</a>
+          <a href="#contact-us" class="button">Contact Us</a>
           <a href="https://www.linkedin.com/" target="_blank" class="button__ghost">LinkedIn</a>
         </div>
       </div>
@@ -683,6 +682,26 @@
       this.style.display = 'none';
       document.querySelector('.w-nav-menu').style.display = 'none';
     });
+    document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('email-form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+      const emailInput = document.getElementById('email-2');
+
+      // Example: Simulate an error if the email input is empty
+      if (!emailInput.value) {
+        const errorMessageDiv = document.querySelector('.error-message');
+        errorMessageDiv.style.display = 'block'; // Show the error message
+        errorMessageDiv.textContent = 'Please enter your email address.';
+      } else {
+        // Here you would typically send the form data using fetch/XHR/Ajax and handle response
+        // For now, let's just simulate a successful submission
+        const successMessageDiv = document.querySelector('.w-form-done');
+        successMessageDiv.style.display = 'block';
+        successMessageDiv.textContent = 'Thank you! Your email has been submitted.';
+      }
+    });
+  });
 
   </script>
 

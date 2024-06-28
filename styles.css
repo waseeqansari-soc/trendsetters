@@ -4670,11 +4670,16 @@ footer .copyright {
 .error-message {
   margin-top: 1.5rem;
   padding: 0.875rem 1rem;
+  color: #f4f4f4  ;
 }
 
 .success-message {
   padding: 1.5rem;
   background-color: #f4f4f4;
+}
+.success-message,
+.error-message {
+    display: none; /* Hide messages by default */
 }
 
 .footer_logo-link {
@@ -5505,7 +5510,7 @@ footer .copyright {
 
 /* Individual Feature Boxes */
 .feature-box {
-  background: linear-gradient(145deg, #2e3a5f, #3c4b7a);
+  background: linear-gradient(145deg, #02081E, #2e3a5f);
   /* Dark gradient */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -5527,7 +5532,7 @@ footer .copyright {
   /* Increased lift effect on hover */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
   /* More pronounced shadow on hover */
-  background: linear-gradient(145deg, #17224f, #263570);
+  /* background: linear-gradient(145deg, #17224f, #263570); */
   /* Darker gradient on hover */
   color: #E26231;
   /* Change text color */
@@ -5752,6 +5757,9 @@ footer .copyright {
         }
       }
     }
+    .maus-option {
+      color: #000;
+    }
 
     .featured {
       margin-block: 30px;
@@ -5780,6 +5788,7 @@ footer .copyright {
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.1s;
+      text-align: center;
 
       &:hover,
       &.active {
@@ -6831,6 +6840,9 @@ footer .copyright {
   .layout_component {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+  .testimonial-custom-padding { 
+    padding: 0 0 !important;
   }
 
   .testimonial_content {
