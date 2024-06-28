@@ -61,10 +61,10 @@
                 <div class="w-layout-grid header1_component">
                   <div class="header1_content">
                     <div class="margin-bottom margin-small">
-                      <h1 class="h1 text-color-white text-align-center-mobile">Helping content creators transition to
+                      <h1 class="h1 text-color-white text-align-center-desktop text-align-center-mobile">Helping content creators transition to
                         Web 3</h1>
                     </div>
-                    <p class="text-size-medium text-color-white text-align-center-mobile">Empowering content creators to
+                    <p class="text-size-medium text-color-white text-align-center-desktop text-align-center-mobile">Empowering content creators to
                       thrive in the decentralized web. We help you navigate the transition to Web 3 and monetize your
                       content on the blockchain.</p>
                     <div class="margin-top margin-medium">
@@ -490,11 +490,9 @@
           <div class="padding-bottom padding-xxlarge">
             <div class="w-layout-grid footer1_top-wrapper">
               <div class="footer1_left-wrapper">
-                <div class="margin-bottom margin-small"><a href="#" class="footer_logo-link w-nav-brand"><img
-                      src="https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c496893c4abfdbe004431b_trendsetters-logo.png"
-                      loading="lazy" sizes="(max-width: 479px) 63vw, 54vw"
-                      srcset="https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c496893c4abfdbe004431b_trendsetters-logo-p-500.png 500w, https://assets.website-files.com/62c3422ec88d54b2a4b3505b/62c496893c4abfdbe004431b_trendsetters-logo.png 1347w"
-                      alt="" class="logo-footer"></a></div>
+                <div class="margin-bottom margin-small"><a href="#" class="footer_logo-link w-nav-brand"><p>
+                  Excellez Web Design
+                </p></a></div>
                 <div class="margin-bottom margin-small">
                   <div class="text-size-regular text-color-white">Join our newsletter to stay up to date on features
                     and releases.</div>
@@ -702,7 +700,66 @@
       }
     });
   });
+  const pricingPlans = [
+  {
+    name: "Starter",
+    price: "$19",
+    features: [
+      "500MAUs",
+      "3 projects",
+      "Unlimited guides",
+      "Unlimited flows",
+      "Unlimited branded themes",
+      "Email support"
+    ],
+    buttonText: "Choose Plan",
+    buttonLink: "#"
+  },
+  {
+    name: "Pro",
+    price: "$99 / month",
+    features: [
+      "All starter features, plus:",
+      "Unlimited projects",
+      "Unlimited fully customizable themes",
+      "A dedicated customer success manager"
+    ],
+    buttonText: "Choose Plan",
+    buttonLink: "#"
+  },
+  {
+    name: "Enterprise",
+    price: "Let's talk!",
+    features: [
+      "All Pro features",
+      "Unlimited MAUs",
+      "Dedicated environment",
+      "Premium support and services"
+    ],
+    buttonText: "Contact Us",
+    buttonLink: "contact-us"
+  }
+];
+document.addEventListener('DOMContentLoaded', function() {
+  const pricingTable = document.querySelector('.pricing-table');
 
+  pricingPlans.forEach(plan => {
+    const planDiv = document.createElement('div');
+    planDiv.className = 'plan ' + plan.name.toLowerCase();
+    
+    const planContent = `
+      <h2 class="name">${plan.name}</h2>
+      <div class="price">${plan.price}</div>
+      <ul class="features">
+        ${plan.features.map(feature => `<li>${feature}</li>`).join('')}
+      </ul>
+      <a href="${plan.buttonLink}" class="choose-btn" role="button">${plan.buttonText}</a>
+    `;
+
+    planDiv.innerHTML = planContent;
+    pricingTable.appendChild(planDiv);
+  });
+});
   </script>
 
 </body>
