@@ -280,6 +280,12 @@ html {
   height: 100%;
   scroll-behavior: smooth;
 }
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 
 body {
   margin: 0;
@@ -4969,6 +4975,7 @@ figcaption {
   background-position: 50% 50%;
   background-size: cover;
   padding-top: 30px;
+  height: 500px;
 }
 
 .button-row {
