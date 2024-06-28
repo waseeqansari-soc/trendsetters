@@ -5065,7 +5065,8 @@ footer .copyright {
 .logo {
   order: 1;
   max-width: 15rem;
-  /* Slightly increased size */
+  color: #ffffff;
+  font-size: 20px;
   width: 100%;
   height: auto;
 }
@@ -5212,12 +5213,12 @@ footer .copyright {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 2.5rem;
+    font-size: 24px;
     height: auto;
     width: 15rem;
     /* Slightly increased size */
     text-decoration: none;
-    color: #333333;
+    color: #ffffff;
     float: left;
   }
 
@@ -6294,7 +6295,7 @@ footer .copyright {
   }
 
   .button {
-    width: 90%;
+    width: 30%;
     /* Full width with some padding */
     margin: 10px 35px;
     /* Space between buttons */
