@@ -383,7 +383,7 @@
   <section class='Pricing' id="Price">
     <div class="chosen-plan">
       <span>Your current plan:</span>
-      <span class="plan-name">
+      <span class="plan-name" id="current-plan">
         Starter Trial • 500MAUs
       </span>
     </div>
@@ -398,13 +398,17 @@
         <input type="checkbox" id="bill-toggle" checked>
         <label for="bill-toggle"></label>
       </div>
-      <div class="annually">Billed anually</div>
+      <div class="annually">Billed annually</div>
     </div>
 
     <div class="pricing-table">
       <div class="plan starter">
         <h2 class="name">Starter</h2>
-        <div class="price">$19</div>
+        <div class="price">
+          <span class="original-price">$228</span>
+          <span class="discounted-price">$19/month <sub>(or $228/year)</sub></span>
+          <span class="annual-discount">$180/year</span>
+        </div>
         <ul class="features">
           <li>500MAUs</li>
           <li>3 projects</li>
@@ -413,14 +417,18 @@
           <li>Unlimited branded themes</li>
           <li>Email support</li>
         </ul>
-        <button class="choose-btn" type="button">
+        <button class="choose-btn" type="button" onclick="updateCurrentPlan('Starter • 500MAUs')">
           Choose Plan
         </button>
       </div>
 
       <div class="plan pro">
         <h2 class="name">Pro</h2>
-        <div class="price">$99 <sub>/ month</sub></div>
+        <div class="price">
+          <span class="original-price">$1188</span>
+          <span class="discounted-price">$99/month <sub>(or $1188/year)</sub></span>
+          <span class="annual-discount">$1000/year</span>
+        </div>
         <div class="maus-options">
           <select name="" id="">
             <option class="maus-option" value="">2500 MAUs</option>
@@ -435,7 +443,7 @@
           <li>Unlimited fully customizable themes</li>
           <li>A dedicated customer success manager</li>
         </ul>
-        <button class="choose-btn active" type="button">
+        <button class="choose-btn active" type="button" onclick="updateCurrentPlan('Pro • 2500 MAUs')">
           Choose Plan
         </button>
       </div>
@@ -449,11 +457,14 @@
           <li>Dedicated environment</li>
           <li>Premium support and services</li>
         </ul>
-        <a href="contact-us" class="choose-btn" role="button">Contact Us</a>
-
+        <a href="contact-us" class="choose-btn" role="button" onclick="updateCurrentPlan('Enterprise • Unlimited MAUs')">Contact Us</a>
       </div>
     </div>
   </section>
+
+
+
+
 
   <section class="about about-section" id="About">
     <div class="about__container about-container">
@@ -705,67 +716,10 @@
         }
       });
     });
-    const pricingPlans = [
-      {
-        name: "Starter",
-        price: "$19",
-        features: [
-          "500MAUs",
-          "3 projects",
-          "Unlimited guides",
-          "Unlimited flows",
-          "Unlimited branded themes",
-          "Email support"
-        ],
-        buttonText: "Choose Plan",
-        buttonLink: "#"
-      },
-      {
-        name: "Pro",
-        price: "$99 / month",
-        features: [
-          "All starter features, plus:",
-          "Unlimited projects",
-          "Unlimited fully customizable themes",
-          "A dedicated customer success manager"
-        ],
-        buttonText: "Choose Plan",
-        buttonLink: "#"
-      },
-      {
-        name: "Enterprise",
-        price: "Let's talk!",
-        features: [
-          "All Pro features",
-          "Unlimited MAUs",
-          "Dedicated environment",
-          "Premium support and services"
-        ],
-        buttonText: "Contact Us",
-        buttonLink: "contact-us"
-      }
-    ];
-    document.addEventListener('DOMContentLoaded', function () {
-      const pricingTable = document.querySelector('.pricing-table');
-
-      pricingPlans.forEach(plan => {
-        const planDiv = document.createElement('div');
-        planDiv.className = 'plan ' + plan.name.toLowerCase();
-
-        const planContent = `
-      <h2 class="name">${plan.name}</h2>
-      <div class="price">${plan.price}</div>
-      <ul class="features">
-        ${plan.features.map(feature => `<li>${feature}</li>`).join('')}
-      </ul>
-      <a href="${plan.buttonLink}" class="choose-btn" role="button">${plan.buttonText}</a>
-    `;
-
-        planDiv.innerHTML = planContent;
-        pricingTable.appendChild(planDiv);
-      });
-    });
-  </script>
+    function updateCurrentPlan(planName) {
+  document.getElementById('current-plan').innerText = planName;
+}
+      </script>
 
 </body>
 

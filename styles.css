@@ -5742,6 +5742,7 @@ footer .copyright {
     border-radius: 12px;
     display: flex;
     flex-direction: column;
+    text-align: center;
 
     @media screen and (max-width: 920px) {
       &:not(:last-of-type) {
@@ -5750,7 +5751,6 @@ footer .copyright {
     }
 
     .name {
-      text-align: center;
       font-size: 1.7rem;
       font-weight: 600;
       margin-top: 0;
@@ -5758,19 +5758,35 @@ footer .copyright {
     }
 
     .price {
-      text-align: center;
-      font-size: 3.5rem;
+      font-size: 1.75rem;
       font-weight: 700;
       margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
 
-      sub {
-        position: static;
-        font-size: 1.5rem;
+      .original-price {
+        text-decoration: line-through;
+        font-size: 1rem;
+        color: #999;
       }
-    }
 
-    &.enterprise .price {
-      font-size: 2.5rem;
+      .discounted-price {
+        font-size: 1.5rem;
+
+        sub {
+          font-size: 0.875rem;
+        }
+      }
+
+      .annual-discount {
+        font-size: 1.25rem;
+        color: var(--primary-color);
+      }
+
+      &.enterprise .price {
+        font-size: 2.5rem;
+      }
     }
 
     .maus-options {
@@ -5791,10 +5807,11 @@ footer .copyright {
 
         &+span {
           font-size: 0.875rem;
-          color: var(--primary-color)
+          color: var(--primary-color);
         }
       }
     }
+
     .maus-option {
       color: #000;
     }
@@ -5834,7 +5851,7 @@ footer .copyright {
       }
     }
   }
-}
+}   
 
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap');
