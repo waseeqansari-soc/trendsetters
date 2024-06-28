@@ -61,14 +61,16 @@
                 <div class="w-layout-grid header1_component">
                   <div class="header1_content">
                     <div class="margin-bottom margin-small">
-                      <h1 class="h1 text-color-white text-align-center-desktop text-align-center-mobile">Helping content creators transition to
+                      <h1 class="h1 text-color-white text-align-center-desktop text-align-center-mobile">Helping content
+                        creators transition to
                         Web 3</h1>
                     </div>
-                    <p class="text-size-medium text-color-white text-align-center-desktop text-align-center-mobile">Empowering content creators to
+                    <p class="text-size-medium text-color-white text-align-center-desktop text-align-center-mobile">
+                      Empowering content creators to
                       thrive in the decentralized web. We help you navigate the transition to Web 3 and monetize your
                       content on the blockchain.</p>
                     <div class="margin-top margin-medium">
-                      <div class="button-row"><a href="#contact-us" class="button w-button">Get started</a></div>
+                      <div class="button-row"><a href="#contact-us" class="button1" >Get Started </a></div>
                     </div>
                     <div class="margin-bottom margin-huge hide-tablet hide-mobile-portrait"></div>
                   </div>
@@ -329,7 +331,8 @@
               <p class="text-size-medium text-color-white">We help you navigate the transition to Web 3 and monetize
                 your content on the blockchain.</p>
               <div class="margin-top margin-medium">
-                <div class="button-row is-button-row-center"><a href="#contact-us" class="button w-button">Get Started</a>
+                <div class="button-row is-button-row-center"><a href="#contact-us" class="button w-button">Get
+                    Started</a>
                 </div>
               </div>
             </div>
@@ -490,9 +493,11 @@
           <div class="padding-bottom padding-xxlarge">
             <div class="w-layout-grid footer1_top-wrapper">
               <div class="footer1_left-wrapper">
-                <div class="margin-bottom margin-small"><a href="#" class="footer_logo-link w-nav-brand"><p>
-                  Excellez Web Design
-                </p></a></div>
+                <div class="margin-bottom margin-small"><a href="#" class="footer_logo-link w-nav-brand">
+                    <p>
+                      Excellez Web Design
+                    </p>
+                  </a></div>
                 <div class="margin-bottom margin-small">
                   <div class="text-size-regular text-color-white">Join our newsletter to stay up to date on features
                     and releases.</div>
@@ -680,74 +685,74 @@
       this.style.display = 'none';
       document.querySelector('.w-nav-menu').style.display = 'none';
     });
-    document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('email-form');
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the form from submitting normally
-      const emailInput = document.getElementById('email-2');
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('email-form');
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        const emailInput = document.getElementById('email-2');
 
-      // Example: Simulate an error if the email input is empty
-      if (!emailInput.value) {
-        const errorMessageDiv = document.querySelector('.error-message');
-        errorMessageDiv.style.display = 'block'; // Show the error message
-        errorMessageDiv.textContent = 'Please enter your email address.';
-      } else {
-        // Here you would typically send the form data using fetch/XHR/Ajax and handle response
-        // For now, let's just simulate a successful submission
-        const successMessageDiv = document.querySelector('.w-form-done');
-        successMessageDiv.style.display = 'block';
-        successMessageDiv.textContent = 'Thank you! Your email has been submitted.';
-      }
+        // Example: Simulate an error if the email input is empty
+        if (!emailInput.value) {
+          const errorMessageDiv = document.querySelector('.error-message');
+          errorMessageDiv.style.display = 'block'; // Show the error message
+          errorMessageDiv.textContent = 'Please enter your email address.';
+        } else {
+          // Here you would typically send the form data using fetch/XHR/Ajax and handle response
+          // For now, let's just simulate a successful submission
+          const successMessageDiv = document.querySelector('.w-form-done');
+          successMessageDiv.style.display = 'block';
+          successMessageDiv.textContent = 'Thank you! Your email has been submitted.';
+        }
+      });
     });
-  });
-  const pricingPlans = [
-  {
-    name: "Starter",
-    price: "$19",
-    features: [
-      "500MAUs",
-      "3 projects",
-      "Unlimited guides",
-      "Unlimited flows",
-      "Unlimited branded themes",
-      "Email support"
-    ],
-    buttonText: "Choose Plan",
-    buttonLink: "#"
-  },
-  {
-    name: "Pro",
-    price: "$99 / month",
-    features: [
-      "All starter features, plus:",
-      "Unlimited projects",
-      "Unlimited fully customizable themes",
-      "A dedicated customer success manager"
-    ],
-    buttonText: "Choose Plan",
-    buttonLink: "#"
-  },
-  {
-    name: "Enterprise",
-    price: "Let's talk!",
-    features: [
-      "All Pro features",
-      "Unlimited MAUs",
-      "Dedicated environment",
-      "Premium support and services"
-    ],
-    buttonText: "Contact Us",
-    buttonLink: "contact-us"
-  }
-];
-document.addEventListener('DOMContentLoaded', function() {
-  const pricingTable = document.querySelector('.pricing-table');
+    const pricingPlans = [
+      {
+        name: "Starter",
+        price: "$19",
+        features: [
+          "500MAUs",
+          "3 projects",
+          "Unlimited guides",
+          "Unlimited flows",
+          "Unlimited branded themes",
+          "Email support"
+        ],
+        buttonText: "Choose Plan",
+        buttonLink: "#"
+      },
+      {
+        name: "Pro",
+        price: "$99 / month",
+        features: [
+          "All starter features, plus:",
+          "Unlimited projects",
+          "Unlimited fully customizable themes",
+          "A dedicated customer success manager"
+        ],
+        buttonText: "Choose Plan",
+        buttonLink: "#"
+      },
+      {
+        name: "Enterprise",
+        price: "Let's talk!",
+        features: [
+          "All Pro features",
+          "Unlimited MAUs",
+          "Dedicated environment",
+          "Premium support and services"
+        ],
+        buttonText: "Contact Us",
+        buttonLink: "contact-us"
+      }
+    ];
+    document.addEventListener('DOMContentLoaded', function () {
+      const pricingTable = document.querySelector('.pricing-table');
 
-  pricingPlans.forEach(plan => {
-    const planDiv = document.createElement('div');
-    planDiv.className = 'plan ' + plan.name.toLowerCase();
-    
-    const planContent = `
+      pricingPlans.forEach(plan => {
+        const planDiv = document.createElement('div');
+        planDiv.className = 'plan ' + plan.name.toLowerCase();
+
+        const planContent = `
       <h2 class="name">${plan.name}</h2>
       <div class="price">${plan.price}</div>
       <ul class="features">
@@ -756,10 +761,10 @@ document.addEventListener('DOMContentLoaded', function() {
       <a href="${plan.buttonLink}" class="choose-btn" role="button">${plan.buttonText}</a>
     `;
 
-    planDiv.innerHTML = planContent;
-    pricingTable.appendChild(planDiv);
-  });
-});
+        planDiv.innerHTML = planContent;
+        pricingTable.appendChild(planDiv);
+      });
+    });
   </script>
 
 </body>
