@@ -5173,7 +5173,7 @@ footer .copyright {
   order: 1;
   max-width: 15rem;
   color: #ffffff;
-  font-size: 25px;
+  font-size: 22.5px;
   width: 100%;
   height: auto;
   font-weight: 550;
@@ -5321,7 +5321,7 @@ footer .copyright {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 24px;
+    font-size: 22px;
     height: auto;
     width: 15rem;
     /* Slightly increased size */
