@@ -846,7 +846,7 @@ p {
   justify-content: space-between;
   margin-top: 20px;
   position: relative;
-  top: -40px;
+  top: -258px;
   /* raise position of buttons */
   z-index: 10;
 }
