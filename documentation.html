@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Excellez Design Express Documentation</title>
+    <!-- Framework CSS -->
+    <link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+    <!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+    <style type="text/css" media="screen">
+        p, table, hr, .box { margin-bottom:25px; }
+        .box p { margin-bottom:10px; }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="center alt">&ldquo;Excellez Design Express&rdquo; Documentation by &ldquo;Template Author&rdquo; v1.0</h3>
+
+        <hr>
+
+        <h1 class="center">&ldquo;Excellez Design Express&rdquo;</h1>
+
+        <div class="borderTop">
+            <div class="span-6 colborder info prepend-1">
+                <p class="prepend-top">
+                    <strong>
+                        Created: x/x/xxxx<br>
+                        By: Your Name<br>
+                        Email: <a href="mailto:youremail@yourdomain.com">youremail@yourdomain.com</a>
+                    </strong>
+                </p>
+            </div>
+
+
+        </div>
+
+        <hr>
+
+        <h2 id="toc" class="alt">Table of Contents</h2>
+        <ol class="alpha">
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#customization">Customization</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+            <li><a href="#credits">Sources and Credits</a></li>
+        </ol>
+
+        <hr>
+
+        <h3 id="installation"><strong>A) Installation</strong> - <a href="#toc">top</a></h3>
+        <p>To install the "Excellez Design Express" template, follow these steps:</p>
+        <ol>
+            <li>Download the template package from ThemeForest and unzip it to your desired location on your computer.</li>
+            <li>Upload the contents of the 'excellez-template' folder to your web server using an FTP client or your hosting provider's file manager.</li>
+            <li>Ensure that the following files and folders are correctly uploaded:
+                <ul>
+                    <li>index.html</li>
+                    <li>css/styles.css</li>
+                    <li>js/scripts.js</li>
+                    <li>assets/</li>
+                </ul>
+            </li>
+            <li>Open your web browser and navigate to your website's URL to see the template in action.</li>
+        </ol>
+
+        <hr>
+
+        <h3 id="customization"><strong>B) Customization</strong> - <a href="#toc">top</a></h3>
+        <p>Customizing the template is straightforward. Here are some common customization tasks:</p>
+        <h4>1. Changing the Logo</h4>
+        <p>To change the logo, replace the <code>logo.png</code> file located in the <code>assets/images/</code> directory with your own logo file. Ensure the new logo file has the same name and format.</p>
+
+        <h4>2. Updating Colors</h4>
+        <p>To update the colors used in the template, open the <code>styles.css</code> file and find the color variables at the top of the file:</p>
+        <pre>
+:root {
+    --primary-color: #ff5722;
+    --secondary-color: #333333;
+    --background-color: #ffffff;
+}
+        </pre>
+        <p>Change the values to your desired colors.</p>
+
+        <h4>3. Editing Text</h4>
+        <p>To edit the text content, open the <code>index.html</code> file and locate the sections you want to edit. For example, to change the main heading:</p>
+        <pre>
+&lt;h1 class="h1 text-color-white text-align-center-desktop text-align-center-mobile"&gt;Helping content creators transition to Web 3&lt;/h1&gt;
+        </pre>
+        <p>Replace the existing text with your own content.</p>
+
+        <h4>4. Updating the Favicon</h4>
+        <p>To update the favicon, replace the <code>favicon.png</code> file located in the <code>assets/</code> directory with your own favicon file. Ensure the new favicon file has the same name and format.</p>
+
+        <h4>5. Adding New Sections</h4>
+        <p>To add new sections to your page, copy an existing section in the <code>index.html</code> file and modify it as needed. For example, to add a new feature section:</p>
+        <pre>
+&lt;section class="new-feature-section"&gt;
+    &lt;div class="container"&gt;
+        &lt;h2&gt;New Feature&lt;/h2&gt;
+        &lt;p&gt;Description of the new feature.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+        </pre>
+
+        <hr>
+
+        <h3 id="usage"><strong>C) Usage</strong> - <a href="#toc">top</a></h3>
+        <p>The template includes several features to enhance your website. Here are some key features and how to use them:</p>
+
+        <h4>1. Navigation Bar</h4>
+        <p>The navigation bar is located at the top of the page. To add or remove menu items, edit the following section in <code>index.html</code>:</p>
+        <pre>
+&lt;ul class="menu-items"&gt;
+    &lt;li&gt;&lt;a href="#Feature"&gt;Features&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#Price"&gt;Price&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#About"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#contact-us" class="get-started-btn"&gt;Get Started&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+        </pre>
+
+        <h4>2. Slideshow</h4>
+        <p>The template includes a Swiper.js slideshow. To add or remove slides, edit the following section in <code>index.html</code>:</p>
+        <pre>
+&lt;div class="swiper-container"&gt;
+    &lt;div class="swiper-wrapper"&gt;
+        &lt;div class="swiper-slide"&gt;Slide 1 Content&lt;/div&gt;
+        &lt;div class="swiper-slide"&gt;Slide 2 Content&lt;/div&gt;
+        &lt;div class="swiper-slide"&gt;Slide 3 Content&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+    &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
+    &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+
+        <h4>3. Contact Form</h4>
+        <p>The contact form is located in the footer section. To configure the form to send emails, update the <code>action</code> attribute in the form element with your form handling script URL:</p>
+        <pre>
+&lt;form id="email-form" name="email-form" action="/path-to-your-endpoint" method="POST" class="footer1_form" aria-label="Email Form"&gt;
+    &lt;input type="email" class="form-input w-input" maxlength="256" name="email-2" placeholder="Enter your email" id="email-2" required&gt;
+    &lt;input type="submit" value="Subscribe" data-wait="Please wait..." class="button-secondary is-button-small w-button"&gt;
+&lt;/form&gt;
+        </pre>
+
+        <h4>4. Testimonials Slider</h4>
+        <p>The testimonials slider uses custom JavaScript. To add or remove testimonials, edit the following section in <code>index.html</code>:</p>
+        <pre>
+&lt;div class="testimonial-slider"&gt;
+    &lt;div class="testimonial_content active"&gt;
+        &lt;div class="margin-vertical margin-medium"&gt;
+            &lt;div class="text-size-medium text-color-white"&gt;
+                "Excellez has been an absolute game-changer for my career as a content creator..."
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="testimonial7_client-image-wrapper"&gt;
+            &lt;img src="assets/testimonial1.jpg" loading="lazy" sizes="64px" alt="Client Image" class="testimonial7_client-image"&gt;
+        &lt;/div&gt;
+        &lt;p class="text-weight-semibold text-color-white"&gt;Mike Travis&lt;/p&gt;
+        &lt;p class="text-size-regular text-color-white"&gt;1.3M+ Followers&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="testimonial_content"&gt;
+        &lt;div class="margin-vertical margin-medium"&gt;
+            &lt;div class="text-size-medium text-color-white"&gt;
+                "I was hesitant about transitioning to Web 3, but Excellez made the process so much easier..."
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="testimonial7_client-image-wrapper"&gt;
+            &lt;img src="assets/testimonial2.jpg" loading="lazy" sizes="64px" alt="Client Image" class="testimonial7_client-image"&gt;
+        &lt;/div&gt;
+        &lt;p class="text-weight-semibold text-color-white"&gt;Sarah Bris&lt;/p&gt;
+        &lt;p class="text-size-regular text-color-white"&gt;600K+ Followers&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+
+        <hr>
+
+        <h3 id="javascript"><strong>D) JavaScript</strong> - <a href="#toc">top</a></h3>
+        <p>The project includes the following JavaScript files:</p>
+        <ul>
+            <li><strong>Swiper.js</strong>: For creating the slider component.</li>
+            <li><strong>Bootstrap.js</strong>: For interactive components like modals and tooltips.</li>
+            <li><strong>Custom scripts</strong>: Additional custom functionality.</li>
+        </ul>
+
+        <h4>1. Testimonials Slider</h4>
+        <p>This section describes the functionality of the testimonials slider:</p>
+        <pre>
+document.addEventListener('DOMContentLoaded', (event) => {
+    let currentIndex = 0;
+    const testimonials = document.querySelectorAll('.testimonial_content');
+    const totalTestimonials = testimonials.length;
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function showTestimonial(index) {
+        // Hide all testimonials
+        testimonials.forEach((testimonial, i) => {
+            testimonial.classList.remove('active');
+            testimonial.setAttribute('aria-hidden', 'true'); // Accessibility improvement
+        });
+        // Show the selected testimonial
+        testimonials[index].classList.add('active');
+        testimonials[index].setAttribute('aria-hidden', 'false'); // Accessibility improvement
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? totalTestimonials - 1 : currentIndex - 1;
+        showTestimonial(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === totalTestimonials - 1) ? 0 : currentIndex + 1;
+        showTestimonial(currentIndex);
+    });
+
+    // Initialize the first testimonial
+    showTestimonial(currentIndex);
+});
+        </pre>
+
+        <h4>2. Update Current Plan</h4>
+        <p>This section describes the functionality to update the current plan displayed:</p>
+        <pre>
+function updateCurrentPlan(planName) {
+    document.getElementById('current-plan').innerText = planName;
+}
+        </pre>
+
+        <h4>3. Billing Toggle</h4>
+        <p>This section describes the functionality for toggling between monthly and annual billing:</p>
+        <pre>
+document.getElementById('bill-toggle').addEventListener('change', function () {
+    if (this.checked) {
+        document.querySelectorAll('.monthly-price').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.annual-price').forEach(el => el.classList.add('active'));
+        document.getElementById('monthly-label').classList.remove('active-label');
+        document.getElementById('annually-label').classList.add('active-label');
+    } else {
+        document.querySelectorAll('.annual-price').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.monthly-price').forEach(el => el.classList.add('active'));
+        document.getElementById('annually-label').classList.remove('active-label');
+        document.getElementById('monthly-label').classList.add('active-label');
+    }
+});
+        </pre>
+
+        <h4>4. Logo Animation</h4>
+        <p>This section describes the functionality for animating the partner logos:</p>
+        <pre>
+window.addEventListener('load', function () {
+    const logoList = document.querySelector('.logo_list');
+    const logos = Array.from(logoList.children);
+
+    // Duplicate the logos to ensure a seamless loop
+    logos.forEach(logo => {
+        const clone = logo.cloneNode(true);
+        logoList.appendChild(clone);
+    });
+
+    let scrollPosition = 0;
+
+    function animateLogos() {
+        // Move the logos to the left by 1 pixel each frame
+        scrollPosition += 1;
+
+        // If the scroll position goes beyond the first set of logos, reset it to 0
+        if (scrollPosition >= (logoList.scrollWidth / 2)) {
+            scrollPosition = 0;
+        }
+
+        logoList.style.transform = `translateX(-${scrollPosition}px)`;
+
+        // Call this function again on the next animation frame
+        requestAnimationFrame(animateLogos);
+    }
+
+    // Start the animation
+    animateLogos();
+});
+        </pre>
+
+        <h4>5. Navbar Toggle</h4>
+        <p>This section describes the functionality for toggling the navigation menu:</p>
+        <pre>
+document.querySelector('.navbar_menu-button').addEventListener('click', function () {
+    var navMenu = document.querySelector('.w-nav-menu');
+    var navOverlay = document.querySelector('.w-nav-overlay');
+    var isVisible = navMenu.style.display === 'flex';
+
+    navMenu.style.display = isVisible ? 'none' : 'flex'; // Toggle display
+    navOverlay.style.display = isVisible ? 'none' : 'block'; // Toggle overlay
+});
+
+document.querySelector('.w-nav-overlay').addEventListener('click', function () {
+    this.style.display = 'none';
+    document.querySelector('.w-nav-menu').style.display = 'none';
+});
+        </pre>
+
+        <h4>6. Form Submission</h4>
+        <p>This section describes the functionality for handling form submission:</p>
+        <pre>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('email-form');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        const emailInput = document.getElementById('email-2');
+
+        // Example: Simulate an error if the email input is empty
+        if (!emailInput.value) {
+            const errorMessageDiv = document.querySelector('.error-message');
+            errorMessageDiv.style.display = 'block'; // Show the error message
+            errorMessageDiv.textContent = 'Please enter your email address.';
+        } else {
+            // Here you would typically send the form data using fetch/XHR/Ajax and handle response
+            // For now, let's just simulate a successful submission
+            const successMessageDiv = document.querySelector('.w-form-done');
+            successMessageDiv.style.display = 'block';
+            successMessageDiv.textContent = 'Thank you! Your email has been submitted.';
+        }
+    });
+});
+        </pre>
+
+        <hr>
+
+        <h3 id="credits"><strong>E) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+        <p>I've used the following images, icons, or other files as listed.</p>
+        <ul>
+            <li>Logo images from <a href="https://logoipsum.com/">Logoipsum</a></li>
+            <li>Icons from <a href="https://fontawesome.com/">Font Awesome</a></li>
+            <li>Photos from <a href="https://unsplash.com/">Unsplash</a></li>
+            <li>Swiper.js from <a href="https://swiperjs.com/">Swiper.js</a></li>
+            <li>Bootstrap from <a href="https://getbootstrap.com/">Bootstrap</a></li>
+        </ul>
+
+        <hr>
+
+        <p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+    </div>
+</body>
+
+</html>
