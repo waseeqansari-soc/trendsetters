@@ -1982,6 +1982,7 @@ footer .copyright {
   color: #ffffff;
   /* White title */
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .about__description {
@@ -1998,6 +1999,7 @@ footer .copyright {
   margin-bottom: 1.5rem;
   padding: 0;
   list-style: none;
+  justify-content: center;
 }
 
 .about__skills li {
@@ -2015,6 +2017,7 @@ footer .copyright {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  justify-content: center;
 }
 
 .about__buttons a {
@@ -2065,27 +2068,33 @@ footer .copyright {
 
 @media (max-width: 992px) {
   .about__buttons {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .about__buttons a {
     padding: 12px 24px;
     width: 165px !important;
+    font-size: 12px;
+  }
+  .about__buttons .contact-button {
+    font-size: 12px;
   }
 
 }
 
 @media screen and (min-width: 751px) and (max-width: 991px) {
   .contact-button {
-    width: 22% !important;
-    margin: 10px 19px !important;
+    width: 21% !important;
+    margin: 10px 0 !important;
+    height: 48px;
   }
 }
 
 @media screen and (max-width: 750px) {
   .contact-button {
     width: 21% !important;
-    margin: 10px 19px !important;
+    margin: 10px 0 !important;
+    height: 48px;
   }
 }
 
@@ -2108,6 +2117,11 @@ footer .copyright {
   /* Light orange background for the button */
   color: #ffffff;
   /* White text */
+}
+@media screen and (max-width:564px) {
+  .button-get-started {
+    width: 50% !important;
+  }
 }
 
 .button:hover {
@@ -2478,6 +2492,7 @@ footer .copyright {
   }
 
   .footer1_menu-wrapper {
+
     grid-column-gap: 1.5rem;
   }
 }
@@ -2586,7 +2601,7 @@ footer .copyright {
   .footer1_menu-wrapper {
     grid-row-gap: 2.5rem;
     -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .h1 {
