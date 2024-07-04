@@ -25,6 +25,22 @@ a img {border:none;}
 .info { background:#fafcfc; }
 .borderTop { border-top: 1px solid #eee;}
 .append-0 {padding-right:20px;}
+/* Style for code blocks */
+pre {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  background-color: #000;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
 
 /* typography.css */
 body {font-size:80%;color:#222;background:#fff;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;padding-top:30px;}
