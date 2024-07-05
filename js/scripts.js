@@ -30,23 +30,37 @@ document.addEventListener('DOMContentLoaded', (event) => {
     showTestimonial(currentIndex);
 });
 
-function updateCurrentPlan(planName) {
-    document.getElementById('current-plan').innerText = planName;
-}
-
 document.getElementById('bill-toggle').addEventListener('change', function () {
+    const monthlyPrices = document.querySelectorAll('.monthly-price');
+    const annualPrices = document.querySelectorAll('.annual-price');
     if (this.checked) {
-        document.querySelectorAll('.monthly-price').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.annual-price').forEach(el => el.classList.add('active'));
-        document.getElementById('monthly-label').classList.remove('active-label');
-        document.getElementById('annually-label').classList.add('active-label');
+      monthlyPrices.forEach(el => el.classList.remove('active'));
+      annualPrices.forEach(el => el.classList.add('active'));
+      document.getElementById('monthly-label').classList.remove('active-label');
+      document.getElementById('annually-label').classList.add('active-label');
     } else {
-        document.querySelectorAll('.annual-price').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.monthly-price').forEach(el => el.classList.add('active'));
-        document.getElementById('annually-label').classList.remove('active-label');
-        document.getElementById('monthly-label').classList.add('active-label');
+      annualPrices.forEach(el => el.classList.remove('active'));
+      monthlyPrices.forEach(el => el.classList.add('active'));
+      document.getElementById('annually-label').classList.remove('active-label');
+      document.getElementById('monthly-label').classList.add('active-label');
     }
-});
+  });
+
+  function updateProPrice() {
+    const select = document.getElementById('maus-select');
+    const selectedOption = select.options[select.selectedIndex];
+    const monthlyPrice = selectedOption.getAttribute('data-monthly');
+    const annualPrice = selectedOption.getAttribute('data-annual');
+
+    document.querySelector('.pro .monthly-price').innerText = `$${monthlyPrice}/month`;
+    document.getElementById('pro-original-annual').innerText = `$${monthlyPrice * 12}/year`;
+    document.getElementById('pro-discounted-annual').innerText = `$${annualPrice}/year`;
+    document.querySelector('.pro .annual-price sub').innerText = `(equivalent to $${(annualPrice / 12).toFixed(2)}/month)`;
+  }
+
+  function updateCurrentPlan(planName) {
+    document.getElementById('current-plan').innerText = planName;
+  }
 window.addEventListener('load', function () {
     const logoList = document.querySelector('.logo_list');
     const logos = Array.from(logoList.children);
