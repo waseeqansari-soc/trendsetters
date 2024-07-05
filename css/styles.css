@@ -1675,7 +1675,7 @@ footer .copyright {
 .Pricing {
   color: var(--text-color);
   background-color: var(--body-bg);
-  font-family: 'Open Sans', sans-serif;
+  font-family: Ppmori, sans-serif;
 }
 
 .chosen-plan {
@@ -1939,7 +1939,7 @@ footer .copyright {
 }
 
 .about body {
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: Ppmori, sans-serif;
   background-color: #121212;
   /* Dark background */
   color: #e0e0e0;
